@@ -238,6 +238,11 @@ section { padding-block: clamp(72px, 10vw, 128px); }
 }
 .assoc-item:hover { color: var(--text); }
 .assoc-sep { color: var(--orange); font-size: 9px; opacity: .85; transform: rotate(45deg); display: inline-block; }
+.assoc-logo {
+  width: 34px; height: 34px; margin-right: 13px;
+  border-radius: 9px; object-fit: cover; background: #fff;
+  border: 1px solid var(--line); flex: none;
+}
 @keyframes assoc-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 @media (prefers-reduced-motion: reduce) {
   .marquee-track { animation: none; width: 100%; justify-content: center; flex-wrap: wrap; gap: 8px; }
