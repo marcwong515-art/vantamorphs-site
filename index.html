@@ -53,7 +53,15 @@
       </a>
 
       <nav class="nav-links" aria-label="Primary">
-        <a href="#animals">Our Animals</a>
+        <div class="nav-item has-drop">
+          <a href="ball-pythons.html" class="drop-trigger" aria-haspopup="true" aria-expanded="false">Our Animals
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </a>
+          <div class="drop" role="menu">
+            <a href="ball-pythons.html" role="menuitem">Ball Pythons</a>
+            <a href="crested-geckos.html" role="menuitem">Crested Geckos</a>
+          </div>
+        </div>
         <a href="#acquire">Available</a>
         <a href="#education">Husbandry</a>
         <a href="#journal">Journal</a>
@@ -69,7 +77,8 @@
     </div>
     <!-- mobile menu -->
     <div class="mobile-menu" id="mobileMenu">
-      <a href="#animals">Our Animals</a>
+      <a href="ball-pythons.html">Ball Pythons</a>
+      <a href="crested-geckos.html">Crested Geckos</a>
       <a href="#acquire">Available</a>
       <a href="#education">Husbandry</a>
       <a href="#journal">Journal</a>
@@ -89,7 +98,7 @@
           <h1>Living Art,<br><span class="accent">Within Reach.</span></h1>
           <p class="lead">VANTAMORPHS breeds world-class ball python morphs in Sabah, Malaysia — premium genetics, raised with elite husbandry, and priced so every keeper can own something extraordinary.</p>
           <div class="hero-cta">
-            <a href="#acquire" class="btn btn-primary btn-lg">Explore Available Animals <span class="arrow">→</span></a>
+            <a href="ball-pythons.html" class="btn btn-primary btn-lg">Explore Available Animals <span class="arrow">→</span></a>
             <a href="#story" class="btn btn-ghost btn-lg">Read Our Story</a>
           </div>
           <p class="hero-tagline">"Where Elegance Slithers Into Reach"</p>
@@ -427,16 +436,7 @@
   </footer>
 
   <script>
-    // Mobile menu
-    const toggle = document.getElementById('navToggle');
-    const menu = document.getElementById('mobileMenu');
-    toggle?.addEventListener('click', () => {
-      const open = menu.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', open);
-    });
-    menu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-      menu.classList.remove('open'); toggle.setAttribute('aria-expanded', false);
-    }));
+    // Mobile menu + nav dropdown live in assets/site.js
 
     // ---- Animations (anime.js) — play once per session, then lock ----
     var useAnime = document.documentElement.classList.contains('use-anime');
@@ -515,5 +515,6 @@
       setTimeout(sweep, 250);
     }
   </script>
+  <script src="assets/site.js"></script>
 </body>
 </html>
