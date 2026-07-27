@@ -63,8 +63,9 @@ body {
 img, svg { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
 ul { list-style: none; }
-/* Form controls & buttons don't inherit fonts by default — force Manrope everywhere */
-button, input, select, textarea { font: inherit; }
+/* Form controls & buttons inherit neither font nor colour by default —
+   without `color` they render as black `buttontext`, invisible on the dark theme. */
+button, input, select, textarea { font: inherit; color: inherit; }
 
 /* ---------- Type scale (64/48/32/24/18/16) ---------- */
 h1, h2, h3, h4 { font-weight: 800; line-height: 1.06; letter-spacing: -.02em; }
@@ -227,7 +228,10 @@ section { padding-block: clamp(72px, 10vw, 128px); }
 .lb-strip button.is-active { opacity: 1; border-color: var(--orange); }
 
 /* card used as a button */
-button.card { display: block; width: 100%; text-align: left; padding: 0; border: 1px solid var(--line); font: inherit; cursor: pointer; }
+button.card { display: block; width: 100%; text-align: left; padding: 0; border: 1px solid var(--line); font: inherit; color: var(--text); cursor: pointer; }
+button.card h3 { color: var(--text); }
+button.card .meta span { color: var(--text-dim); }
+button.card .meta .price { color: var(--text); }
 
 /* ---------- Hero ---------- */
 .hero { position: relative; padding-block: clamp(56px, 9vw, 104px); overflow: hidden; }
