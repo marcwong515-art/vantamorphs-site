@@ -148,6 +148,8 @@ section { padding-block: clamp(72px, 10vw, 128px); }
   display: inline-flex; align-items: center; gap: 6px;
   font-size: 15px; font-weight: 600; color: var(--text-dim);
   transition: color .2s var(--ease); cursor: pointer;
+  /* it's a <button>: strip chrome so it reads as a nav link */
+  background: none; border: 0; padding: 0; line-height: inherit; font-family: inherit;
 }
 .nav-item:hover .drop-trigger, .nav-item.open .drop-trigger { color: var(--text); }
 .nav-item .chev { width: 14px; height: 14px; transition: transform .3s var(--ease); }
@@ -360,6 +362,8 @@ button.card { display: block; width: 100%; text-align: left; padding: 0; border:
 .card-body { padding: 22px 24px 26px; }
 .card-body .tag { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--orange); }
 .card-body h3 { font-size: 19px; font-weight: 700; margin-top: 8px; letter-spacing: -.01em; }
+/* no "Available" tag above it — the name is the label, so it leads the card */
+.card-body h3:first-child { margin-top: 0; line-height: 1.25; }
 .card-body .meta { margin-top: 14px; display: flex; justify-content: space-between; align-items: center; color: var(--text-mute); font-size: 14px; }
 .card-body .price { color: var(--text); font-weight: 700; }
 

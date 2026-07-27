@@ -30,11 +30,10 @@
     item.addEventListener('focusout', function (e) {
       if (!item.contains(e.relatedTarget)) close();
     });
-    // touch: first tap opens instead of following the link
+    // The trigger is a <button>: it never navigates, it only toggles the menu.
     trigger.addEventListener('click', function (e) {
-      if (matchMedia('(hover: none)').matches && !item.classList.contains('open')) {
-        e.preventDefault(); open();
-      }
+      e.preventDefault();
+      if (item.classList.contains('open')) close(); else open();
     });
     document.addEventListener('click', function (e) { if (!item.contains(e.target)) close(); });
   });
