@@ -46,6 +46,34 @@
   --t-theme: background-color .35s var(--ease), border-color .35s var(--ease), color .35s var(--ease), box-shadow .35s var(--ease);
 }
 
+/* ------------------------------------------------------------
+   LIGHT THEME — used on Journal / long-form reading pages only.
+   Add class="theme-light" to <html>. Everything else stays dark.
+   ------------------------------------------------------------ */
+.theme-light {
+  --bg:         #FFFFFF;
+  --bg-soft:    #F5F6FA;
+  --surface:    #FFFFFF;
+  --line:       rgba(15, 17, 26, .13);
+  --text:       #0B0C10;
+  --text-dim:   #4A4D59;
+  --text-mute:  #6E7180;
+
+  /* deepened orange so it reads as rich on white as #FD5018 does on black */
+  --orange:     #E84512;
+  --orange-600: #D33B0C;
+
+  --header-bg:  rgba(255, 255, 255, .86);
+  --ph-grad:    radial-gradient(120% 120% at 30% 10%, #F1F2F7 0%, #E8EAF2 55%, #DFE2EC 100%);
+  --ph-wm:      .10;
+  --partner-grad: linear-gradient(120deg, #F5F6FA, #ECEEF5);
+  --card-shadow: 0 14px 40px rgba(15, 17, 26, .07);
+  --glow:       radial-gradient(circle, rgba(232,69,18,.10), transparent 62%);
+}
+/* the top bar stays brand orange with white text in both themes */
+.theme-light .topbar { background: var(--orange); color: #fff; }
+.theme-light .btn-primary { color: #fff; }
+
 /* ---------- Reset ---------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
