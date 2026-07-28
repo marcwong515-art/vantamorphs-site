@@ -4,6 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Theme: apply saved choice before paint (no flash). Falls back to this page's default. -->
+  <script>
+    (function () {
+      var def = document.documentElement.getAttribute('data-default-theme') || 'dark';
+      var t = null;
+      try { t = localStorage.getItem('vm-theme'); } catch (e) {}
+      if ((t || def) === 'light') document.documentElement.classList.add('theme-light');
+    })();
+  </script>
+
+
   <title>VANTAMORPHS | Sabah's First Ball Python Breeder</title>
   <meta name="description" content="VANTAMORPHS is Sabah's first dedicated ball python breeder, world-class genetics, made financially accessible. In collaboration with Dreamfish Sabah." />
 
@@ -69,6 +80,10 @@
       </nav>
 
       <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch between light and dark mode" title="Light / dark mode">
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+        </button>
         <a href="https://wa.me/601119520000?text=Hi%20VANTAMORPHS%21%20I%27d%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener" class="btn btn-primary">Inquire <span class="arrow">→</span></a>
         <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" id="navToggle">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>

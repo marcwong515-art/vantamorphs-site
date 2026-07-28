@@ -171,6 +171,20 @@ section { padding-block: clamp(72px, 10vw, 128px); }
 .nav-toggle { display: none; background: none; border: 0; color: var(--text); cursor: pointer; }
 .nav-toggle svg { width: 26px; height: 26px; stroke: currentColor; }
 
+/* ---------- Light / dark theme toggle ---------- */
+.theme-toggle {
+  width: 40px; height: 40px; border-radius: 50%; flex: none;
+  border: 1px solid var(--line); background: transparent; color: var(--text);
+  display: grid; place-items: center; cursor: pointer; padding: 0;
+  transition: border-color .2s var(--ease), color .2s var(--ease), transform .2s var(--ease);
+}
+.theme-toggle:hover { border-color: var(--orange); color: var(--orange); transform: translateY(-1px); }
+.theme-toggle svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2; }
+/* show the icon for the mode you'll switch TO */
+.theme-toggle .icon-moon { display: none; }
+.theme-light .theme-toggle .icon-moon { display: block; }
+.theme-light .theme-toggle .icon-sun { display: none; }
+
 /* ---------- Nav dropdown ---------- */
 .nav-item { position: relative; }
 .nav-item .drop-trigger {

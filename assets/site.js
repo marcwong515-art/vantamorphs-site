@@ -2,6 +2,18 @@
 (function () {
   'use strict';
 
+  /* ---------- Light / dark theme toggle ----------
+     The chosen theme is saved and applies across the whole site. Until the
+     visitor picks one, each page uses its own default (articles open light,
+     everything else dark) via data-default-theme + the inline <head> script. */
+  var themeBtn = document.getElementById('themeToggle');
+  if (themeBtn) {
+    themeBtn.addEventListener('click', function () {
+      var light = document.documentElement.classList.toggle('theme-light');
+      try { localStorage.setItem('vm-theme', light ? 'light' : 'dark'); } catch (e) {}
+    });
+  }
+
   /* ---------- Mobile menu ---------- */
   var navToggle = document.getElementById('navToggle');
   var mobileMenu = document.getElementById('mobileMenu');
