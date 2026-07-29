@@ -70,8 +70,6 @@
   --card-shadow: 0 14px 40px rgba(15, 17, 26, .07);
   --glow:       radial-gradient(circle, rgba(232,69,18,.10), transparent 62%);
 }
-/* the top bar stays brand orange with white text in both themes */
-.theme-light .topbar { background: var(--orange); color: #fff; }
 .theme-light .btn-primary { color: #fff; }
 
 /* ---------- Reset ---------- */
@@ -141,14 +139,6 @@ section { padding-block: clamp(72px, 10vw, 128px); }
   font-weight: 800; font-size: 21px; letter-spacing: .14em; color: var(--text);
   transition: color .35s var(--ease);
 }
-
-/* ---------- Top bar ---------- */
-.topbar {
-  background: var(--orange); color: #fff;
-  font-size: 13px; font-weight: 600; letter-spacing: .02em;
-  text-align: center; padding: 9px var(--gutter);
-}
-.topbar span { opacity: .95; }
 
 /* ---------- Header / Nav ---------- */
 .header {
