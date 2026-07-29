@@ -35,7 +35,6 @@
   --ph-wm:      .07;
   --partner-grad: linear-gradient(120deg, #1E1E24, #0C0C10);
   --card-shadow: none;
-  --glow:       radial-gradient(circle, rgba(253,80,24,.22), transparent 62%);
 
   /* layout */
   --maxw: 1240px;
@@ -68,7 +67,6 @@
   --ph-wm:      .10;
   --partner-grad: linear-gradient(120deg, #F5F6FA, #ECEEF5);
   --card-shadow: 0 14px 40px rgba(15, 17, 26, .07);
-  --glow:       radial-gradient(circle, rgba(232,69,18,.10), transparent 62%);
 }
 .theme-light .btn-primary { color: #fff; }
 
@@ -369,10 +367,6 @@ button.card .meta .price { color: var(--text); }
 .hero-tagline {
   margin-top: 38px; padding-top: 26px; border-top: 1px solid var(--line);
   font-style: italic; color: var(--text-mute); font-size: 17px;
-}
-.hero-glow {
-  position: absolute; width: 600px; height: 600px; right: -150px; top: -120px;
-  background: var(--glow); pointer-events: none; z-index: 0;
 }
 .hero > .wrap { position: relative; z-index: 1; }
 
